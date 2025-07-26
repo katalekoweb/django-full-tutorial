@@ -68,5 +68,7 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
+## What is an ORM
+Object Relational Mapping (ORM) is a programming technique that allows developers to interact with a database using an object-oriented paradigm. It abstracts the database interactions, enabling developers to work with database records as if they were regular Python objects, without writing raw SQL queries.
 
 
