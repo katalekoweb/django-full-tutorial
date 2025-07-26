@@ -11,14 +11,25 @@ body {
     font-size: 3rem;
     display: flex;
     flex-flow: column;
+    font-family: 'Arial', sans-serif;
 }
 
 nav {
     padding: 1rem;
-    background-color: #44B78B;
+    background-color: #212423ff;
     color: white;
     font-size: 2.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 main {
     flex-grow: 1;
