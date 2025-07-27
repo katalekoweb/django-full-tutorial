@@ -39,7 +39,7 @@ main {
 
 h1,
 p {
-    text-align: center;
+    /* text-align: center; */
 }
 
 a {
@@ -49,4 +49,12 @@ a {
 
 a:hover {
     opacity: .85;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    max-height: 400px;
+    object-fit: cover;
 }
