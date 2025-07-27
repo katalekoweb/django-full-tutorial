@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Post
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>New Post</h1>
+        <form action="{% url 'posts:create' %}" method="post" enctype="multipart/form-data">
+            {% comment %} {% if form.errors %}
+                <div class="alert alert-danger">
+                    <ul>
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %} {% endcomment %}
+
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Create Post</button>
+        </form>
+    </section>
+
+    <a href="{% url 'posts:list' %}">Back to Posts</a>
+{% endblock %}

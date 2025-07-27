@@ -21,7 +21,11 @@ def login_view (request):
         if (form.is_valid()):
             # Login here
             login(request, form.get_user())
-            return redirect('posts:list')
+            if "next" in request.POST:
+                return redirect(request.POST.get("next"))
+            else:
+                # Redirect to posts list after login
+                return redirect('posts:list')
         
         return redirect("users:login")
     else:
