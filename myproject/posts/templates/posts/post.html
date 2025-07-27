@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+        <p><em>Posted on {{ post.created_at }}</em></p>
+        <div>_____________________________________</div>
+    </section>
+
+    <a href="{% url 'posts:list' %}">Back to Posts</a>
+{% endblock %}
